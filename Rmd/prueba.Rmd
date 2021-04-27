@@ -1,0 +1,72 @@
+---
+title: "Frecuencias y tabla de contigencia de preguntas seleccionadas Encuesta Seguridad y Justicia del Inventario CDMX"
+author: "Tona Santiago"
+date: "12/5/2020"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r, echo=FALSE}
+knitr::opts_chunk$set(error = TRUE)
+```
+
+
+## Tablas cruzadas
+
+
+```{r }
+
+# Excpeción a la ley --------------------------------------------------------
+    library(pander)
+    pander(round(prop.table(svytable(~cl_ley, design=design))*100,1))
+    pander((na.omit(prop.table(na.omit(svytable(~SEXO+cl_ley, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~EDAD+cl_ley, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~ESCOLARIDAD+cl_ley, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~S111B+cl_ley, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~P49+cl_ley, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~P9+cl_ley, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~cl_conflicto+cl_ley, design)),1)))*100)
+
+
+# Confianza operadores---------------------------------------------------------------
+
+    library(pander)
+    pander(round(prop.table(svytable(~cl_justicia, design=design))*100,1))
+    pander((na.omit(prop.table(na.omit(svytable(~SEXO+cl_justicia, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~EDAD+cl_justicia, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~ESCOLARIDAD+cl_justicia, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~S111B+cl_justicia, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~P49+cl_justicia, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~P9+cl_justicia, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~cl_conflicto+cl_justicia, design)),1)))*100)
+    
+
+# Resoluciones ------------------------------------------------------------
+
+    library(pander)
+    pander(round(prop.table(svytable(~cl_resoluciones, design=design))*100,1))
+    pander((na.omit(prop.table(na.omit(svytable(~SEXO+cl_resoluciones, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~EDAD+cl_resoluciones, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~ESCOLARIDAD+cl_resoluciones, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~S111B+cl_resoluciones, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~P49+cl_resoluciones, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~P9+cl_resoluciones, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~cl_conflicto+cl_resoluciones, design)),1)))*100)
+
+# Autocomposición ---------------------------------------------------------
+
+    library(pander)
+    pander(round(prop.table(svytable(~cl_conflicto, design=design))*100,1))
+    pander((na.omit(prop.table(na.omit(svytable(~SEXO+cl_conflicto, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~EDAD+cl_conflicto, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~ESCOLARIDAD+cl_conflicto, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~S111B+cl_conflicto, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~P49+cl_conflicto, design)),1)))*100)
+    pander((na.omit(prop.table(na.omit(svytable(~P9+cl_conflicto, design)),1)))*100)
+ 
+  
+```
+
