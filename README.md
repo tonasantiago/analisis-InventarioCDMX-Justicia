@@ -7,7 +7,7 @@ El proyecto busca relacionar las percepeciones de los habitantes de la Ciudad de
 El script realiza las siguientes operaciones:
 
 1.  Con el conjunto de datos proporcionados, junto con el diseño muestral, se crea una nueva variable ("UPM") que servirá para declarar el diseño muestral.
-2.  Al ser datos que provienen de un diseño muestral se necesita declara dicho diseño para hacer inferencias válidas, para eso su usa el paquete [survey]: https://cran.r-project.org/web/packages/survey/survey.pdf
+2.  Al ser datos que provienen de un diseño muestral se necesita declara dicho diseño para hacer inferencias válidas, para eso su usa el paquete 'survey'
 3.  Se guardan algunas frecuencias simples de interés para el estudio
 4.  Se crean algunos índices de interés para el estudio
 5.  Se cruzan algunos índices con algunas otras preguntas del cuestionario de la encuesta así como con algunas datos sociodemográficos
